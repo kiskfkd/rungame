@@ -4,6 +4,8 @@
 class Enemy :
 	public GameObject
 {
+	
+	int r;
 	int hModel_;
 public:
 	//コンストラクタ

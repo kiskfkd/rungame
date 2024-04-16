@@ -1,7 +1,7 @@
 #include "Enemy.h"
 #include "Engine/Model.h"
 #include"Engine/Collider.h"
-
+float p[] = { -2,0,2 };
 Enemy::Enemy(GameObject* parent)
 	:GameObject(parent, "Enemy"), hModel_(-1)
 {
@@ -16,7 +16,7 @@ void Enemy::Initialize()
 {
 	hModel_ = Model::Load("Bullet.fbx");
 	assert(hModel_ >= 0);
-	transform_.position_ = { (float)(rand() % 5- 2), 0, 20 };
+	transform_.position_ = {p[rand() % 3], 0, 20};
 	SphereCollider* collision = new SphereCollider({ 0, 0, 0 }, 1.0f);
 	AddCollider(collision);
 }
