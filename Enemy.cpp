@@ -14,7 +14,7 @@ Enemy::~Enemy()
 
 void Enemy::Initialize()
 {
-	hModel_ = Model::Load("Bullet.fbx");
+	hModel_ = Model::Load("stone.fbx");
 	assert(hModel_ >= 0);
 	transform_.position_ = {p[rand() % 3], 0, 20};
 	SphereCollider* collision = new SphereCollider({ 0, 0, 0 }, 1.0f);
@@ -47,3 +47,5 @@ void Enemy::OnCollision(GameObject* pTarget)
 		pTarget->KillMe();
 	}
 }
+
+
