@@ -1,6 +1,6 @@
 #include "Enemy.h"
 #include "Engine/Model.h"
-#include"Engine/Collider.h"
+#include "Engine/SphereCollider.h"
 float p[] = { -2,0,2 };
 Enemy::Enemy(GameObject* parent)
 	:GameObject(parent, "Enemy"), hModel_(-1)
@@ -42,7 +42,7 @@ void Enemy::Release()
 
 void Enemy::OnCollision(GameObject* pTarget)
 {
-	if (pTarget->GetObjectName() == "Player") {
+	if (pTarget->GetObjectName() == "box") {
 		this->KillMe();
 		pTarget->KillMe();
 	}

@@ -120,7 +120,9 @@
     <ClCompile Include="Enemy.cpp">
       <Filter>PlayScene</Filter>
     </ClCompile>
-    <ClCompile Include="Stage.cpp" />
+    <ClCompile Include="Stage.cpp">
+      <Filter>PlayScene</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine\BoxCollider.h">
@@ -208,7 +210,9 @@
     <ClInclude Include="Player.h">
       <Filter>PlayScene</Filter>
     </ClInclude>
-    <ClInclude Include="Stage.h" />
+    <ClInclude Include="Stage.h">
+      <Filter>PlayScene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Assets\Shader\Simple2D.hlsl">

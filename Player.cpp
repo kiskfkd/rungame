@@ -4,6 +4,7 @@
 #include "Engine/Debug.h"
 #include "Engine/Image.h"
 #include "Engine/SceneManager.h"
+#include "Engine/SphereCollider.h"
 //#include "Stage.h"
 //#include "Gauge.h"
 
@@ -19,15 +20,15 @@ Player::~Player()
 
 void Player::Initialize()
 {
-	//モデルデータのロード
 	hModel_ = Model::Load("box.fbx");
 	assert(hModel_ >= 0);
 	transform_.position_ = { 0,0,0 };
+	
 }
 
 void Player::Update()
+
 {
-	//左右移動
 	if (Input::IsKeyDown(DIK_LEFT))
 	{
 		if (transform_.position_.x >-2.0f) 
@@ -50,10 +51,11 @@ void Player::Release()
 {
 }
 
-void Player::OnCollision(GameObject* pTarget)
-{
-	if (pTarget->GetObjectName() == "Bullet") {
-		this->KillMe();
-		pTarget->KillMe();
-	}
-}
+//void Player::OnCollision(GameObject* pTarget)
+//{
+//	if (pTarget->GetObjectName() == "stone") {
+//		this->KillMe();
+//		pTarget->KillMe();
+//		
+//	}
+//}

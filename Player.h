@@ -1,11 +1,12 @@
 #pragma once
 #include "Engine/GameObject.h"
 #include "Engine/Text.h"
-
+#include "PlayScene.h"
 class Player :
     public GameObject
 {
     int hModel_; //モデル番号
+    PlayScene* playscene_;
 public:
     //コンストラクタ
     Player(GameObject* parent);
@@ -25,5 +26,5 @@ public:
     //開放
     void Release() override;
 
-    void OnCollision(GameObject* pTarget) override;
+  //  void OnCollision(GameObject* pTarget) override;
 };
