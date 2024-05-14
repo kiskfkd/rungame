@@ -1,7 +1,7 @@
 #include "Enemy.h"
 #include "Engine/Model.h"
 #include "Engine/SphereCollider.h"
-float p[] = { -2,0,2 };
+float p[] = { -2.5,0,2.5 };
 Enemy::Enemy(GameObject* parent)
 	:GameObject(parent, "Enemy"), hModel_(-1)
 {
