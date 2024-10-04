@@ -1,8 +1,11 @@
 #pragma once
 #include "Engine/GameObject.h"
+class Text;
+
 class ClearScene :
 	public GameObject
 {
+	Text* pText;
 	int hPict_;
 public:
 	//コンストラクタ

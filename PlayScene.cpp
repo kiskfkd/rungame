@@ -23,9 +23,11 @@ Instantiate<Player>(this);
 
 void PlayScene::Update()
 {
+
 if (count % 200 == 0){
 	Instantiate<Enemy>(this);
 	Instantiate<Enemy>(this);
+	count = 0;
 }
 	count++;
 }

@@ -25,6 +25,7 @@ void TitleScene::Update()
 
 void TitleScene::Draw()
 {
+	pText->Draw(600, 250, "TITLE");
 	pText->Draw(550, 600, "PUSH TO SPACE");
 
 	Image::SetTransform(hPict_, transform_);
